@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/npm (if you use tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Build / output
+dist/
+build/
+public/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.bak
+.history
