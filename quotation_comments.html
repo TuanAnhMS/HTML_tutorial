@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quotations, Comments, and Text Formats</title>
+</head>
+<body>
+    <h1>Quotations, Comments, and Text Formatting (basic HTML)</h1>
+
+    <h2>1. Block quotations</h2>
+    <p>Use <code>&lt;blockquote&gt;</code> for longer, block-level quotations. Add a citation with <code>&lt;cite&gt;</code> if desired.</p>
+    <blockquote>
+        <p>"The only limit to our realization of tomorrow is our doubts of today."</p>
+        <p><cite>— Franklin D. Roosevelt</cite></p>
+    </blockquote>
+
+    <h2>2. Inline quotations</h2>
+    <p>Use <code>&lt;q&gt;</code> for short, inline quotations:</p>
+    <p>She said <q>I will be there soon</q> and left.</p>
+
+    <h2>3. Quotations with attribution (common patterns)</h2>
+    <p>Often you show the quote then an attribution on the next line:</p>
+    <blockquote>
+        <p>Success is not final; failure is not fatal: It is the courage to continue that counts.</p>
+        <p><cite>— Winston Churchill</cite></p>
+    </blockquote>
+
+    <h2>4. Quoting other sources (using <code>&lt;cite&gt;</code>)</h2>
+    <p>Use <code>&lt;c ite&gt;</code> for the work or source name, not for a person’s name alone:</p>
+    <p>From <cite>The Elements of Style</cite> — <q>Omit needless words.</q></p>
+
+    <h2>5. HTML comments</h2>
+    <p>Comments are invisible in the browser and written like this:</p>
+    <!-- This is an HTML comment. It will not be displayed in the page. -->
+    <p>Example above is a comment and not rendered.</p>
+
+    <h2>6. Text formatting tags</h2>
+    <ul>
+        <li><b>Bold text using &lt;b&gt; — purely presentational</b></li>
+        <li><strong>Strong importance using &lt;strong&gt; — semantic emphasis</strong></li>
+        <li><i>Italic text using &lt;i&gt; — presentational</i></li>
+        <li><em>Emphasis using &lt;em&gt; — semantic emphasis (may be read by screen readers)</em></li>
+        <li><u>Underlined text using &lt;u&gt;</u></li>
+        <li><mark>Highlighted text using &lt;mark&gt;</mark></li>
+        <li><small>Fine print using &lt;small&gt;</small></li>
+        <li><del>Deleted text using &lt;del&gt;</del></li>
+        <li><ins>Inserted text using &lt;ins&gt;</ins></li>
+        <li>Subscript: H<sub>2</sub>O using &lt;sub&gt;</li>
+        <li>Superscript: x<sup>2</sup> using &lt;sup&gt;</li>
+        <li>Code: <code>&lt;code&gt;var x = 1;&lt;/code&gt;</code></li>
+        <li>Sample output: <samp>OK</samp></li>
+        <li>Variable: <var>n</var> (used for variables)</li>
+        <li>Keyboard input: <kbd>Ctrl</kbd> + <kbd>C</kbd></li>
+    </ul>
+
+    <h2>7. Combined examples</h2>
+    <p><strong>Bold</strong>, <em>emphasized</em>, and <u>underlined</u> in one sentence.</p>
+    <p>Quote with formatting: <q><em>Be yourself; everyone else is already taken.</em></q> — <cite>Oscar Wilde</cite></p>
+
+    <h2>8. Notes and best practices</h2>
+    <ul>
+        <li>Prefer <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> for semantic meaning.</li>
+        <li>Use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> when you only want visual styling (older HTML behavior).</li>
+        <li>HTML comments (<!-- ... -->) are removed from the rendered page but visible in page source; do not put secrets there.</li>
+        <li>Use <code>&lt;blockquote&gt;</code> for long quotations and <code>&lt;q&gt;</code> for short inline quotes.</li>
+    </ul>
+
+</body>
+</html>
