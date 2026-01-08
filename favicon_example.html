@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Example</title>
+    
+    <!-- Different ways to add favicon -->
+    <!-- Method 1: Using rel="icon" (most common) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Method 2: Using PNG image -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    
+    <!-- Method 3: Using SVG -->
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg"> -->
+    
+    <!-- Method 4: Apple touch icon (for mobile) -->
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    
+    <!-- Method 5: Using data URI (inline favicon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌐</text></svg>">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        .method {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+        }
+        
+        .method h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Favicon Examples</h1>
+        
+        <div class="method">
+            <h3>Method 1: Using .ico File (Most Common)</h3>
+            <code>&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;</code>
+            <p>This is the traditional method. Place a <code>favicon.ico</code> file in your root directory.</p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 2: Using PNG Image</h3>
+            <code>&lt;link rel="icon" type="image/png" href="favicon.png"&gt;</code>
+            <p>Modern browsers support PNG format. Recommended sizes: 16x16px, 32x32px, or 64x64px</p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 3: Using SVG</h3>
+            <code>&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</code>
+            <p>SVG files are scalable and lightweight. Best for modern browsers.</p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 4: Apple Touch Icon (Mobile)</h3>
+            <code>&lt;link rel="apple-touch-icon" href="apple-touch-icon.png"&gt;</code>
+            <p>Recommended size: 180x180px. Used when users add your site to iPhone home screen.</p>
+        </div>
+        
+        <div class="method">
+            <h3>Method 5: Multiple Favicons (Best Practice)</h3>
+            <pre><code>&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
+&lt;link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"&gt;
+&lt;link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"&gt;
+&lt;link rel="apple-touch-icon" href="apple-touch-icon-180x180.png"&gt;</code></pre>
+            <p>Provide multiple formats for maximum browser compatibility.</p>
+        </div>
+        
+        <div class="note">
+            <strong>💡 Tips:</strong>
+            <ul>
+                <li>Place favicon in root directory or use absolute/relative paths</li>
+                <li>Clear browser cache to see favicon changes</li>
+                <li>Use at least 32x32px for crisp display</li>
+                <li>Test with multiple browsers and devices</li>
+                <li>SVG is recommended for modern web applications</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

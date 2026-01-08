@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title tag appears in the browser tab -->
+    <title>Title Example - HTML Tutorial</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .title-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .title-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .title-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background-color: #2d3436;
+            color: #00ff00;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            display: block;
+            margin: 10px 0;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        
+        .example-title {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .browser-simulation {
+            border: 2px solid #999;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+            background-color: white;
+        }
+        
+        .browser-tab {
+            background-color: #e8e8e8;
+            padding: 10px 15px;
+            border-bottom: 1px solid #999;
+            font-family: Arial, sans-serif;
+            font-size: 0.9em;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .browser-tab::before {
+            content: "○";
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .browser-content {
+            padding: 20px;
+            min-height: 150px;
+        }
+        
+        .tips {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .tips h3 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        
+        .tips li {
+            margin-left: 20px;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 HTML Title Tag Examples</h1>
+        
+        <div class="title-section">
+            <h2>What is the Title Tag?</h2>
+            <p>The <code>&lt;title&gt;</code> tag defines the title of an HTML document. It appears in:</p>
+            <ul style="margin-left: 20px; color: #555;">
+                <li>Browser tab</li>
+                <li>Browser history</li>
+                <li>Search engine results</li>
+                <li>Browser bookmarks</li>
+                <li>Social media previews</li>
+            </ul>
+        </div>
+        
+        <div class="title-section">
+            <h2>Basic Syntax</h2>
+            <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title Goes Here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Page content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+        </div>
+        
+        <div class="browser-simulation">
+            <div class="browser-tab">Tab: Example 1 - Simple Title</div>
+            <div class="browser-content">
+                <h3 style="color: #667eea;">This is how the title appears in the browser tab</h3>
+            </div>
+        </div>
+        
+        <div class="title-section">
+            <h2>Example 1: Simple Title</h2>
+            <code>&lt;title&gt;My Website&lt;/title&gt;</code>
+            <p>The simplest form of a title tag.</p>
+        </div>
+        
+        <div class="title-section">
+            <h2>Example 2: Descriptive Title</h2>
+            <code>&lt;title&gt;Welcome to My Blog - Travel & Technology&lt;/title&gt;</code>
+            <p>Include keywords and description for better SEO.</p>
+        </div>
+        
+        <div class="title-section">
+            <h2>Example 3: Title with Separator</h2>
+            <code>&lt;title&gt;Contact Us | My Company&lt;/title&gt;
+&lt;title&gt;About - Tech Academy · Learn Coding&lt;/title&gt;
+&lt;title&gt;Products &amp; Services / My Shop&lt;/title&gt;</code>
+            <p>Use separators (|, ·, /) to divide page name from site name.</p>
+        </div>
+        
+        <div class="title-section">
+            <h2>Example 4: Dynamic Title</h2>
+            <code>&lt;!-- Changing title based on content --&gt;
+&lt;title&gt;User Profile: John Doe | My App&lt;/title&gt;
+&lt;title&gt;Product: JavaScript Guide | Amazon&lt;/title&gt;
+&lt;title&gt;Search Results: &quot;web design&quot; | Google&lt;/title&gt;</code>
+            <p>Titles can vary based on page content or user input.</p>
+        </div>
+        
+        <div class="title-section">
+            <h2>Example 5: E-commerce Title</h2>
+            <code>&lt;title&gt;Buy Premium Headphones - 50% Off | TechStore&lt;/title&gt;</code>
+            <p>Effective for product pages with call-to-action and discount info.</p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Where It Appears</th>
+                    <th>Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;title&gt;</td>
+                    <td>Browser tab, History, Bookmarks</td>
+                    <td>High - First thing users see</td>
+                </tr>
+                <tr>
+                    <td>Search Results</td>
+                    <td>Google, Bing, etc.</td>
+                    <td>Critical - Affects click-through rate</td>
+                </tr>
+                <tr>
+                    <td>Social Share</td>
+                    <td>Facebook, Twitter, LinkedIn</td>
+                    <td>High - Used as link preview text</td>
+                </tr>
+                <tr>
+                    <td>Browser History</td>
+                    <td>Ctrl/Cmd + H</td>
+                    <td>Medium - Helps users find pages</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="tips">
+            <h3>✓ Best Practices for Titles</h3>
+            <ul>
+                <li><strong>Keep it concise:</strong> 30-60 characters is ideal (50-60 chars for search engines)</li>
+                <li><strong>Include keywords:</strong> Use relevant words early in the title</li>
+                <li><strong>Be descriptive:</strong> Clearly describe page content</li>
+                <li><strong>Unique titles:</strong> Every page should have a unique title</li>
+                <li><strong>Brand name:</strong> Include your site/company name</li>
+                <li><strong>Use separators:</strong> | · - / to separate elements</li>
+                <li><strong>Avoid:</strong> Don't use all caps, special characters, or misleading text</li>
+                <li><strong>Front-load important words:</strong> Put most important info first</li>
+                <li><strong>Update regularly:</strong> Refresh titles for seasonal or trending content</li>
+            </ul>
+        </div>
+        
+        <div class="title-section">
+            <h2>Good vs Bad Title Examples</h2>
+            <table style="width: 100%; margin-top: 15px;">
+                <tr style="background-color: #ffebee;">
+                    <td><strong>❌ Bad</strong></td>
+                    <td><strong>Reason</strong></td>
+                </tr>
+                <tr>
+                    <td>Website</td>
+                    <td>Too generic, no keywords</td>
+                </tr>
+                <tr>
+                    <td>Untitled Page</td>
+                    <td>Never leave default title</td>
+                </tr>
+                <tr>
+                    <td>HOME | HOME | HOME</td>
+                    <td>Repetitive and unhelpful</td>
+                </tr>
+                <tr style="background-color: #e8f5e9;">
+                    <td><strong>✓ Good</strong></td>
+                    <td><strong>Why</strong></td>
+                </tr>
+                <tr>
+                    <td>Best Web Design Agency | Creative Solutions</td>
+                    <td>Descriptive, includes keywords and brand</td>
+                </tr>
+                <tr>
+                    <td>Buy Organic Coffee Online | FreshBrew</td>
+                    <td>Clear purpose, searchable, branded</td>
+                </tr>
+                <tr>
+                    <td>10 SEO Tips for Beginners | Tech Blog</td>
+                    <td>Specific, engaging, helpful</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

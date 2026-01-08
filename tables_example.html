@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Styling Examples - HTML & CSS Tutorial</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #2a5298;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #2a5298;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-left: 5px solid #2a5298;
+            padding-left: 15px;
+        }
+        
+        .example-section {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .example-section h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background-color: #2c3e50;
+            color: #2ecc71;
+            padding: 15px;
+            border-radius: 6px;
+            display: block;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .demo {
+            background-color: white;
+            padding: 20px;
+            border: 2px dashed #bdc3c7;
+            border-radius: 6px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .demo-title {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        /* ===== TABLE STYLES ===== */
+        
+        /* Example 1: Basic Table */
+        .basic-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .basic-table th,
+        .basic-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .basic-table th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Example 2: Striped Table */
+        .striped-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .striped-table th,
+        .striped-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .striped-table th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: #ecf0f1;
+        }
+        
+        .striped-table tbody tr:nth-child(even) {
+            background-color: white;
+        }
+        
+        /* Example 3: Hover Effect Table */
+        .hover-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .hover-table th,
+        .hover-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .hover-table th {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .hover-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-table tbody tr:hover {
+            background-color: #ffe8e8;
+            box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.1);
+            transform: scale(1.01);
+        }
+        
+        /* Example 4: Dark Table */
+        .dark-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #2c3e50;
+        }
+        
+        .dark-table th,
+        .dark-table td {
+            border: 1px solid #34495e;
+            padding: 12px;
+            text-align: left;
+            color: white;
+        }
+        
+        .dark-table th {
+            background-color: #1a252f;
+            font-weight: bold;
+        }
+        
+        .dark-table tbody tr:nth-child(odd) {
+            background-color: #34495e;
+        }
+        
+        .dark-table tbody tr:nth-child(even) {
+            background-color: #2c3e50;
+        }
+        
+        /* Example 5: Compact Table */
+        .compact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        
+        .compact-table th,
+        .compact-table td {
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .compact-table th {
+            background-color: #27ae60;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Example 6: Colored Rows Table */
+        .color-rows-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .color-rows-table th,
+        .color-rows-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .color-rows-table th {
+            background-color: #f39c12;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .color-rows-table tbody tr.success {
+            background-color: #d5f4e6;
+            color: #27ae60;
+        }
+        
+        .color-rows-table tbody tr.warning {
+            background-color: #ffeaa7;
+            color: #f39c12;
+        }
+        
+        .color-rows-table tbody tr.danger {
+            background-color: #ffcccc;
+            color: #e74c3c;
+        }
+        
+        /* Example 7: Gradient Header Table */
+        .gradient-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .gradient-table th,
+        .gradient-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .gradient-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .gradient-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Example 8: Bordered Table */
+        .bordered-table {
+            width: 100%;
+            border: 3px solid #2c3e50;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .bordered-table th,
+        .bordered-table td {
+            border: 1px solid #95a5a6;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .bordered-table th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Example 9: Responsive Table */
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .responsive-table th,
+        .responsive-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .responsive-table th {
+            background-color: #16a085;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .responsive-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        .responsive-table tbody tr:hover {
+            background-color: #d5f4e6;
+        }
+        
+        /* Example 10: Minimal Table */
+        .minimal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-bottom: 3px solid #2c3e50;
+        }
+        
+        .minimal-table th,
+        .minimal-table td {
+            border: none;
+            border-bottom: 1px solid #ecf0f1;
+            padding: 15px 0;
+            text-align: left;
+        }
+        
+        .minimal-table th {
+            color: #2c3e50;
+            font-weight: bold;
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        .minimal-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Example 11: Sortable Table */
+        .sortable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .sortable-table th,
+        .sortable-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .sortable-table th {
+            background-color: #8e44ad;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        .sortable-table th:hover {
+            background-color: #7d3c98;
+        }
+        
+        .sortable-table th::after {
+            content: ' ↕️';
+            position: absolute;
+            right: 8px;
+        }
+        
+        /* Example 12: Price Table */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .price-table th,
+        .price-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: right;
+        }
+        
+        .price-table th {
+            background-color: #c0392b;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .price-table td:first-child,
+        .price-table th:first-child {
+            text-align: left;
+        }
+        
+        .price-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Example 13: Status Badges in Table */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .badge.active {
+            background-color: #d5f4e6;
+            color: #27ae60;
+        }
+        
+        .badge.inactive {
+            background-color: #ffebee;
+            color: #e74c3c;
+        }
+        
+        .badge.pending {
+            background-color: #fff3cd;
+            color: #f39c12;
+        }
+        
+        .status-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .status-table th,
+        .status-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .status-table th {
+            background-color: #2980b9;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Example 14: Data Table with Actions */
+        .action-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+        
+        .action-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .action-btn.delete {
+            background-color: #e74c3c;
+        }
+        
+        .action-btn.delete:hover {
+            background-color: #c0392b;
+        }
+        
+        .action-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .action-table th,
+        .action-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .action-table th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Table Wrapper for scroll */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+        
+        .tips {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .tips h4 {
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+        
+        .tips ul {
+            margin-left: 20px;
+            color: #2c3e50;
+        }
+        
+        .tips li {
+            margin-bottom: 8px;
+        }
+        
+        /* Responsive table - for mobile */
+        @media (max-width: 768px) {
+            .basic-table,
+            .striped-table,
+            .hover-table {
+                font-size: 0.85em;
+            }
+            
+            .basic-table th,
+            .basic-table td,
+            .striped-table th,
+            .striped-table td,
+            .hover-table th,
+            .hover-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 HTML Tables with CSS Styling</h1>
+        
+        <div class="example-section">
+            <h3>Basic HTML Table Syntax</h3>
+            <code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+        </div>
+        
+        <h2>Example 1: Basic Table</h2>
+        <div class="example-section">
+            <h3>Simple Table with Headers and Borders</h3>
+            <code>.basic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.basic-table th,
+.basic-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.basic-table th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="basic-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Department</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>Manager</td>
+                            <td>Sales</td>
+                            <td>$80,000</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Doe</td>
+                            <td>Developer</td>
+                            <td>IT</td>
+                            <td>$75,000</td>
+                        </tr>
+                        <tr>
+                            <td>Bob Johnson</td>
+                            <td>Designer</td>
+                            <td>Design</td>
+                            <td>$65,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 2: Striped Table</h2>
+        <div class="example-section">
+            <h3>Alternating Row Colors for Better Readability</h3>
+            <code>.striped-table tbody tr:nth-child(odd) {
+    background-color: #ecf0f1;
+}
+
+.striped-table tbody tr:nth-child(even) {
+    background-color: white;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="striped-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>Electronics</td>
+                            <td>45</td>
+                            <td>$999</td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>Accessories</td>
+                            <td>120</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>Keyboard</td>
+                            <td>Accessories</td>
+                            <td>85</td>
+                            <td>$79</td>
+                        </tr>
+                        <tr>
+                            <td>Monitor</td>
+                            <td>Electronics</td>
+                            <td>32</td>
+                            <td>$299</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 3: Table with Hover Effect</h2>
+        <div class="example-section">
+            <h3>Interactive Hover State for Rows</h3>
+            <code>.hover-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.hover-table tbody tr:hover {
+    background-color: #ffe8e8;
+    box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.1);
+    transform: scale(1.01);
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo: Hover over rows</div>
+                <table class="hover-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Math</th>
+                            <th>English</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>95</td>
+                            <td>88</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>78</td>
+                            <td>82</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Carol</td>
+                            <td>92</td>
+                            <td>95</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 4: Dark Table</h2>
+        <div class="example-section">
+            <h3>Dark Theme for Modern Look</h3>
+            <code>.dark-table {
+    background-color: #2c3e50;
+}
+
+.dark-table th,
+.dark-table td {
+    border: 1px solid #34495e;
+    color: white;
+}
+
+.dark-table th {
+    background-color: #1a252f;
+}</code>
+            <div class="demo" style="background-color: #1a1a1a;">
+                <div class="demo-title" style="color: white;">Demo:</div>
+                <table class="dark-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Attendees</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-01-15</td>
+                            <td>Web Summit</td>
+                            <td>500</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-20</td>
+                            <td>Tech Conference</td>
+                            <td>750</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-10</td>
+                            <td>Workshop</td>
+                            <td>200</td>
+                            <td>Scheduled</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 5: Compact Table</h2>
+        <div class="example-section">
+            <h3>Reduced Padding for Dense Information</h3>
+            <code>.compact-table {
+    font-size: 0.9em;
+}
+
+.compact-table th,
+.compact-table td {
+    padding: 8px;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Type A</td>
+                            <td>50</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Type B</td>
+                            <td>75</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Type C</td>
+                            <td>40</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 6: Colored Rows Table</h2>
+        <div class="example-section">
+            <h3>Status-Based Row Colors</h3>
+            <code>.color-rows-table tbody tr.success {
+    background-color: #d5f4e6;
+    color: #27ae60;
+}
+
+.color-rows-table tbody tr.warning {
+    background-color: #ffeaa7;
+    color: #f39c12;
+}
+
+.color-rows-table tbody tr.danger {
+    background-color: #ffcccc;
+    color: #e74c3c;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="color-rows-table">
+                    <thead>
+                        <tr>
+                            <th>Server</th>
+                            <th>CPU</th>
+                            <th>Memory</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="success">
+                            <td>Server 1</td>
+                            <td>45%</td>
+                            <td>62%</td>
+                            <td>Healthy</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>Server 2</td>
+                            <td>78%</td>
+                            <td>85%</td>
+                            <td>Warning</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>Server 3</td>
+                            <td>95%</td>
+                            <td>92%</td>
+                            <td>Critical</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 7: Gradient Header Table</h2>
+        <div class="example-section">
+            <h3>Modern Gradient Header Design</h3>
+            <code>.gradient-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="gradient-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Progress</th>
+                            <th>Team</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Redesign</td>
+                            <td>80%</td>
+                            <td>5 members</td>
+                            <td>2024-03-30</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App</td>
+                            <td>60%</td>
+                            <td>8 members</td>
+                            <td>2024-04-15</td>
+                        </tr>
+                        <tr>
+                            <td>Backend API</td>
+                            <td>95%</td>
+                            <td>3 members</td>
+                            <td>2024-02-28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 8: Minimal Table</h2>
+        <div class="example-section">
+            <h3>Clean & Simple Border Design</h3>
+            <code>.minimal-table {
+    border-collapse: collapse;
+    border-bottom: 3px solid #2c3e50;
+}
+
+.minimal-table th,
+.minimal-table td {
+    border: none;
+    border-bottom: 1px solid #ecf0f1;
+    padding: 15px 0;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="minimal-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Basic</th>
+                            <th>Pro</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Users</td>
+                            <td>Up to 10</td>
+                            <td>Up to 100</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>10 GB</td>
+                            <td>100 GB</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Email</td>
+                            <td>Email & Chat</td>
+                            <td>24/7 Phone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 9: Status Table with Badges</h2>
+        <div class="example-section">
+            <h3>Tables with Status Indicators</h3>
+            <code>.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.badge.active {
+    background-color: #d5f4e6;
+    color: #27ae60;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="status-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Assignee</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fix bug #123</td>
+                            <td>John</td>
+                            <td>High</td>
+                            <td><span class="badge active">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Code review</td>
+                            <td>Jane</td>
+                            <td>Medium</td>
+                            <td><span class="badge pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Update docs</td>
+                            <td>Bob</td>
+                            <td>Low</td>
+                            <td><span class="badge inactive">Delayed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 10: Data Table with Actions</h2>
+        <div class="example-section">
+            <h3>Table with Edit/Delete Action Buttons</h3>
+            <code>.action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="action-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice Smith</td>
+                            <td>alice@example.com</td>
+                            <td>Admin</td>
+                            <td>
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bob Johnson</td>
+                            <td>bob@example.com</td>
+                            <td>User</td>
+                            <td>
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carol White</td>
+                            <td>carol@example.com</td>
+                            <td>Moderator</td>
+                            <td>
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h2>Example 11: Price Table</h2>
+        <div class="example-section">
+            <h3>Pricing Table with Right-Aligned Numbers</h3>
+            <code>.price-table td:first-child,
+.price-table th:first-child {
+    text-align: left;
+}
+
+.price-table th,
+.price-table td {
+    text-align: right;
+}</code>
+            <div class="demo">
+                <div class="demo-title">Demo:</div>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Q1</th>
+                            <th>Q2</th>
+                            <th>Q3</th>
+                            <th>Q4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product A</td>
+                            <td>$12,500</td>
+                            <td>$15,200</td>
+                            <td>$18,900</td>
+                            <td>$22,300</td>
+                        </tr>
+                        <tr>
+                            <td>Product B</td>
+                            <td>$8,900</td>
+                            <td>$9,200</td>
+                            <td>$10,100</td>
+                            <td>$11,300</td>
+                        </tr>
+                        <tr>
+                            <td>Product C</td>
+                            <td>$5,600</td>
+                            <td>$6,800</td>
+                            <td>$7,500</td>
+                            <td>$8,200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <h4>✓ Best Practices for Tables</h4>
+            <ul>
+                <li><strong>Use semantic HTML:</strong> Use thead, tbody, tfoot for structure</li>
+                <li><strong>Proper headers:</strong> Always use th for header cells</li>
+                <li><strong>Scope attributes:</strong> Add scope="col" or scope="row" for accessibility</li>
+                <li><strong>Border collapse:</strong> Use border-collapse: collapse for cleaner look</li>
+                <li><strong>Padding:</strong> Add adequate padding (12px+) for readability</li>
+                <li><strong>Contrast:</strong> Ensure header colors have good contrast with text</li>
+                <li><strong>Striping:</strong> Use nth-child for alternating row colors</li>
+                <li><strong>Hover effects:</strong> Add visual feedback on row hover</li>
+                <li><strong>Responsive:</strong> Consider horizontal scroll for mobile devices</li>
+                <li><strong>Accessibility:</strong> Use captions for data tables when needed</li>
+                <li><strong>Keep it simple:</strong> Avoid excessive styling that reduces readability</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
